@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { Transition } from "@headlessui/react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogout = ()=>{
-    //todo handleLogout
-    console.log('Log out')
+    navigate('/login',{
+      replace: true
+    })
   }
 
   return (

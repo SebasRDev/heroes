@@ -9,7 +9,7 @@ export const HeroCard = ({
 }) => {
   return (
     <Link to={`/hero/${id}`}>
-      <div className='rounded-xl overflow-hidden hero__card'>
+      <div className='rounded-xl overflow-hidden hero__card animate__animated animate__fadeIn'>
         <img
           className='hero__img'
           src={`/assets/heroes/${id}.jpg`}

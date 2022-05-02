@@ -40,6 +40,13 @@ export const NavBar = () => {
                   >
                     DC
                   </NavLink>
+                  
+                  <NavLink
+                    to="/search"
+                    className={({isActive}) =>`hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium ${isActive && 'bg-gray-700'}`}
+                  >
+                    Search
+                  </NavLink>
                 </div>
               </div>
             </div>
@@ -76,7 +83,6 @@ export const NavBar = () => {
                   <svg
                     className="block h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     aria-hidden="true"
@@ -92,7 +98,6 @@ export const NavBar = () => {
                   <svg
                     className="block h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
                     aria-hidden="true"

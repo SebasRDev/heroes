@@ -3,8 +3,7 @@ import { HeroList } from '../hero/HeroList'
 
 export const MarvelScreen = () => {
   return (
-    <div>
-      <h1>MarvelScreen</h1>
+    <div className='w-11/12 mx-auto my-8'>
       <HeroList publisher='Marvel Comics' />
 
     </div>

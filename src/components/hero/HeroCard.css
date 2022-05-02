@@ -4,6 +4,12 @@
 
 .hero__card .hero__img{
   width: 100%;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.hero__card:hover .hero__img{
+  transform: scale(1.2);
 }
 
 .hero__content{

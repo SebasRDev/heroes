@@ -12,7 +12,7 @@ export const HeroCard = ({
       <div className='rounded-xl overflow-hidden hero__card animate__animated animate__fadeIn'>
         <img
           className='hero__img'
-          src={`/assets/heroes/${id}.jpg`}
+          src={`./assets/heroes/${id}.jpg`}
           alt={superhero}
         />
         <div className='hero__content'>
@@ -22,7 +22,7 @@ export const HeroCard = ({
           </div>
           <img 
             className='hero__content__icon'
-            src={`/assets/icons/${publisher === 'DC Comics' ? 'dc' : 'marvel'}_icon.png`}
+            src={`./assets/icons/${publisher === 'DC Comics' ? 'dc' : 'marvel'}_icon.png`}
             alt={publisher} 
           />
         </div>

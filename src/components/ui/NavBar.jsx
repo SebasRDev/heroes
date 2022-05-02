@@ -128,17 +128,24 @@ export const NavBar = () => {
             <div className="md:hidden" id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <NavLink
-                to="/marvel"
+                to="/heroes/marvel"
                 className={({isActive}) => isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'}
               >
                 Marvel
               </NavLink>
               
               <NavLink
-                to="/dc"
+                to="/heroes/dc"
                 className={({isActive}) => isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'}
               >
                 DC
+              </NavLink>
+
+              <NavLink
+                to="/heroes/search"
+                className={({isActive}) => isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'}
+              >
+                Search
               </NavLink>
               
               <button

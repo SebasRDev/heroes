@@ -8,7 +8,7 @@ export const HeroCard = ({
   alter_ego
 }) => {
   return (
-    <Link to={`/hero/${id}`}>
+    <Link to={`/heroes/hero/${id}`}>
       <div className='rounded-xl overflow-hidden hero__card animate__animated animate__fadeIn'>
         <img
           className='hero__img'

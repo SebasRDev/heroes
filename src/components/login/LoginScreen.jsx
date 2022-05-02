@@ -5,7 +5,7 @@ export const LoginScreen = () => {
   const navigate = useNavigate()
 
   const handleLogin = () => {
-    navigate('/', {
+    navigate('/heroes', {
       replace: true
     });
   }

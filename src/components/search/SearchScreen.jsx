@@ -66,14 +66,14 @@ export const SearchScreen = () => {
         <h4 className='col-span-full text-center'>Resultados de busqueda</h4>
         { (query === '') 
           ?
-            <div class="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800 col-span-full text-center" role="alert">
+            <div className="p-4 mb-4 text-sm text-blue-700 bg-blue-100 rounded-lg dark:bg-blue-200 dark:text-blue-800 col-span-full text-center" role="alert">
               Busca un héroe
             </div>
         
           : (heroesFitlered.length === 0) 
             && 
-              <div class="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 col-span-full text-center" role="alert">
-                <span class="font-medium">Ops!</span> Parece que no encontramos ningún heroe con el nombre <span class="font-extrabold">{query}</span>
+              <div className="p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-lg dark:bg-red-200 dark:text-red-800 col-span-full text-center" role="alert">
+                <span className="font-medium">Ops!</span> Parece que no encontramos ningún heroe con el nombre <span className="font-extrabold">{query}</span>
               </div>
         }
 

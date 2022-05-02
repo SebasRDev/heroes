@@ -28,21 +28,21 @@ export const NavBar = () => {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
                   <NavLink
-                    to="/marvel"
+                    to="/heroes/marvel"
                     className={({isActive}) =>`hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium ${isActive && 'bg-gray-700'}`}
                   >
                     Marvel
                   </NavLink>
                   
                   <NavLink
-                    to="/dc"
+                    to="/heroes/dc"
                     className={({isActive}) =>`hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium ${isActive && 'bg-gray-700'}`}
                   >
                     DC
                   </NavLink>
                   
                   <NavLink
-                    to="/search"
+                    to="/heroes/search"
                     className={({isActive}) =>`hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium ${isActive && 'bg-gray-700'}`}
                   >
                     Search

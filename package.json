@@ -2,6 +2,7 @@
   "name": "heroes-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sebasrdev.github.io/heroes",
   "dependencies": {
     "@headlessui/react": "^1.6.0",
     "@testing-library/jest-dom": "^5.16.4",

@@ -7,6 +7,7 @@ export const HeroCard = ({
   publisher, 
   alter_ego
 }) => {
+  console.log(process.env.PUBLIC_URL)
   return (
     <Link to={`/heroes/hero/${id}`}>
       <div className='rounded-xl overflow-hidden hero__card animate__animated animate__fadeIn'>

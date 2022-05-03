@@ -31,7 +31,7 @@ export const HeroScreen = () => {
     <div className='flex flex-col sm:flex-row items-center hero__wrapper'>
       <div className='hero__image'>
         <img
-          src={`./assets/heroes/${heroId}.jpg`}
+          src={process.env.PUBLIC_URL +`/assets/heroes/${heroId}.jpg`}
           alt={superhero}
         />
       </div>
@@ -44,7 +44,7 @@ export const HeroScreen = () => {
         <p className='mb-16'>{first_appearance}</p>
         <img 
           className='hero__content__icon'
-          src={`./assets/icons/${publisher === 'DC Comics' ? 'dc' : 'marvel'}_icon.png`}
+          src={process.env.PUBLIC_URL + `/assets/icons/${publisher === 'DC Comics' ? 'dc' : 'marvel'}_icon.png`}
           alt={publisher} 
         />
       </div>
@@ -52,7 +52,7 @@ export const HeroScreen = () => {
         onClick={handleGoBack}
         className="p-2 rounded-full hover:bg-gray-100 cursor-pointer back__button transition-all"
       >
-        <img src={`./assets/icons/arrow-left.png`} alt="back" />
+        <img src={process.env.PUBLIC_URL +`/assets/icons/arrow-left.png`} alt="back" />
       </button>
     </div>
   )

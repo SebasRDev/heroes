@@ -24,7 +24,7 @@ export const SearchScreen = () => {
 
   return (
     <div
-      className="flex"
+      className="flex flex-col sm:flex-row"
     >
       <div
         className="w-12/12 sm:w-6/12 py-8 sm:py-16 px-8"

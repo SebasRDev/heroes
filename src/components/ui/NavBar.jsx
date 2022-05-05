@@ -1,16 +1,27 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/authContext";
+import { Types } from "../../types/types";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const {dispatch} = useContext(AuthContext);
 
   const handleLogout = ()=>{
+    const logAuthAction = {
+      type: Types.logout
+    }
+
+    dispatch(logAuthAction);
+
     navigate('/login',{
       replace: true
     })
   }
+
+  const {user} = useContext(AuthContext);
 
   return (
     <div>
@@ -55,7 +66,7 @@ export const NavBar = () => {
                 <div className="ml-10 flex items-baseline space-x-4">                  
                   <div className="block">
                     <span className="text-violet-500">
-                      Sebastian
+                      {user.name}
                     </span>
 
                     <button
@@ -71,6 +82,9 @@ export const NavBar = () => {
               </div>
             </div>
             <div className="-mr-2 flex md:hidden">
+              <span className="text-violet-500 flex items-center mr-2">
+                {user.name}
+              </span>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
@@ -124,9 +138,9 @@ export const NavBar = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          {(ref) => (
+          {() => (
             <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <NavLink
                 to="/heroes/marvel"
                 className={({isActive}) => isActive ? 'bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium' : 'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium'}
